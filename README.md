@@ -1,6 +1,6 @@
 # petamoru-web
 
-Petamoru’s static legal center is served by GitHub Pages at `petamoru.com`. It uses plain HTML and shared CSS. Inter and Nunito Sans are self-hosted under the SIL Open Font License.
+Petamoru’s static legal center is served by GitHub Pages at `petamoru.com`. It uses plain HTML and shared CSS. Inter and Nunito Sans are self-hosted under the SIL Open Font License. The logo, favicon and touch icon in `img/` are cut from the app's launcher icon.
 
 | Page | English (default) | Spanish | Source files |
 | --- | --- | --- | --- |
@@ -9,7 +9,7 @@ Petamoru’s static legal center is served by GitHub Pages at `petamoru.com`. It
 | Terms | `/terms` | `/es/terms` | `terms.html`, `es/terms.html` |
 | Account deletion | `/delete-account` | `/es/delete-account` | `delete-account.html`, `es/delete-account.html` |
 
-The English privacy and terms paths are fixed by CA-1.2.2 of the app spec. GitHub Pages serves the documents at extensionless URLs. Language selection links to the equivalent page. Keep both versions, their section IDs, dates, and language alternates in sync. The light and dark palettes follow the device preference.
+The privacy and terms paths are the URLs the app links to (CA-1.2.2 of the app spec), so they must not change. GitHub Pages serves the documents at extensionless URLs. Language selection links to the equivalent page. Keep both versions, their section IDs, dates, and language alternates in sync. The light and dark palettes follow the device preference.
 
 ## Preview
 
@@ -19,9 +19,7 @@ Check the eight paths, reciprocal language links and section links. At narrow wi
 
 ## Validation before publication
 
-- Fill in the legal name, NIF and postal address of the controller and service provider in both languages.
-- Confirm the account deletion flow in the app, its actual labels in both languages, and the ownership verification and response process for `privacy@petamoru.com`. Test with regular, Google and guest accounts as applicable.
-- Verify what deletion removes from authentication, single-member and shared households, devices, and backups. Confirm the former-member display and the retention basis for shared records.
-- Verify the policy for guest cleanup, notification tokens, invitations and failed attempts, join requests, security logs, crash reports, and backups. Confirm the previously documented thresholds (30 days, 60 days, 24 hours, 7 days and 90 days for guest cleanup, tokens, invitation codes and failed attempts, join requests, and crash reports, respectively) and replace provisional language with verified timings or criteria.
-- Verify the Supabase region and email provider, the Firebase data and retention settings, each provider’s role and applicable international transfer safeguards. Complete both language versions once validated. See [GDPR Articles 13 and 44–49](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng).
-- Confirm that `https://petamoru.com` has a valid certificate and that the GitHub Pages deployment serves all eight canonical paths.
+- Fill in the legal name, NIF and postal address of the controller in both languages.
+- Confirm that `privacy@petamoru.com` receives mail and how ownership of an account is verified for deletion requests sent by email.
+- Retention periods match the backend's scheduled jobs (`backend/supabase/migrations` in the app repo: guests 30 days, notification tokens 60 days, invitation codes and failed attempts 24 hours, join requests 7 days). Update both languages whenever those jobs change.
+- Check in the Firebase console that Crashlytics keeps reports for 90 days.

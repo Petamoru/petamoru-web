@@ -92,13 +92,28 @@ a:hover { text-decoration-thickness: 0.13em; }
 .brand {
   justify-self: start;
   display: inline-flex;
-  flex-direction: column;
-  font: 900 1.5rem/1.15 "Nunito Sans", sans-serif;
+  align-items: center;
+  gap: 0.7rem;
   text-decoration: none;
   padding-block: 0.25rem;
 }
 
-.brand span {
+.brand img {
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font: 900 1.5rem/1.15 "Nunito Sans", sans-serif;
+}
+
+.brand-sub {
   color: var(--muted);
   font: 600 0.78rem/1.5 "Inter", sans-serif;
 }

@@ -9,13 +9,15 @@
   <link rel="alternate" hreflang="en" href="https://petamoru.com/privacy">
   <link rel="alternate" hreflang="es" href="https://petamoru.com/es/privacy">
   <link rel="alternate" hreflang="x-default" href="https://petamoru.com/privacy">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <header class="site-header">
     <div class="shell header-layout">
-      <a class="brand" href="/es/">Petamoru<span>Centro legal</span></a>
+      <a class="brand" href="/es/"><picture><source srcset="/img/logo-dark.png" media="(prefers-color-scheme: dark)"><img src="/img/logo.png" alt="" width="44" height="44"></picture><span class="brand-text"><span class="brand-name">Petamoru</span><span class="brand-sub">Centro legal</span></span></a>
       <nav class="site-nav" aria-label="Documentos legales">
         <a href="/es/privacy" aria-current="page">Privacidad</a>
         <a href="/es/terms">Términos</a>
@@ -155,7 +157,7 @@
         <p>Si entras con Google, Google trata tus datos de inicio de sesión como responsable independiente según su propia <a href="https://policies.google.com/privacy?hl=es" rel="noopener">política de privacidad</a>.</p>
 
         <h3>Transferencias fuera del EEE</h3>
-        <p>Algunos proveedores pueden tratar datos desde Estados Unidos u otros países fuera del Espacio Económico Europeo. Las transferencias están sujetas a los requisitos del capítulo V del RGPD. El mecanismo aplicable a cada proveedor está pendiente de validación. Puedes escribirnos para pedir información sobre las garantías aplicables.</p>
+        <p>Algunos proveedores pueden tratar datos desde Estados Unidos u otros países fuera del Espacio Económico Europeo. Google LLC está adherida al Marco de Privacidad de Datos UE-EE. UU. Las demás transferencias, incluidas las que pueda hacer Supabase, se amparan en las cláusulas contractuales tipo aprobadas por la Comisión Europea. Puedes escribirnos para pedir una copia de las garantías aplicables.</p>
 
         <p>No vendemos tus datos ni los compartimos para publicidad. Podemos comunicarlos a las autoridades cuando la ley lo exija.</p>
 
@@ -163,17 +165,17 @@
         <ul>
           <li><strong>Cuenta:</strong> los datos de cuenta se conservan mientras mantengas la cuenta. Consulta la <a href="/es/delete-account">página de eliminación</a> para conocer el alcance del borrado.</li>
           <li><strong>Registros en hogares compartidos:</strong> si borras tu cuenta, los registros que hiciste en hogares con más miembros se conservan para que el historial de las mascotas siga completo, pero dejan de estar asociados a tu nombre y aparecen como «Antiguo miembro». Las personas que participaron en el hogar aún podrían reconocerte por el contexto o por el propio contenido. Los hogares en los que eras el único miembro están incluidos en el borrado de cuenta.</li>
-          <li><strong>Modo invitado:</strong> los datos de invitado están sujetos a limpieza por inactividad.</li>
-          <li><strong>Tokens de notificaciones:</strong> se conservan para enviar avisos mientras el token esté en uso.</li>
-          <li><strong>Códigos de invitación e intentos fallidos:</strong> se conservan para gestionar el acceso a los hogares y protegerlos frente a abusos. Las solicitudes para unirse están sujetas a caducidad.</li>
-          <li><strong>Informes de fallos:</strong> se conservan para diagnosticar y corregir fallos.</li>
+          <li><strong>Modo invitado:</strong> un invitado que no usa la app durante 30 días se borra automáticamente junto con su hogar.</li>
+          <li><strong>Tokens de notificaciones:</strong> se borran si no se actualizan en 60 días, o en cuanto el servicio de notificaciones indica que ya no son válidos.</li>
+          <li><strong>Códigos de invitación e intentos fallidos:</strong> los códigos se borran 24 horas después de caducar o revocarse, y los intentos fallidos, 24 horas después de producirse. Las solicitudes para unirse caducan a los 7 días.</li>
+          <li><strong>Informes de fallos:</strong> se conservan un máximo de 90 días.</li>
         </ul>
-        <p>Las copias de seguridad pueden conservar datos hasta que se renueven en su ciclo ordinario. La validación de los plazos exactos de conservación y borrado técnico está pendiente.</p>
+        <p>Las copias de seguridad técnicas de nuestro proveedor de base de datos pueden contener datos hasta que se sobrescriben en su ciclo ordinario.</p>
 
         <h2 id="rights">6. Tus derechos</h2>
         <p>Puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad:</p>
         <ul>
-          <li><strong>Borrar tu cuenta y tus datos:</strong> desde <em>Perfil → Borrar mis datos</em> o por correo. Consulta las <a href="/es/delete-account">instrucciones de eliminación</a>.</li>
+          <li><strong>Borrar tu cuenta y tus datos:</strong> desde <em>Perfil → Borrar cuenta</em> (<em>Borrar mis datos</em> en modo invitado) o por correo. Consulta las <a href="/es/delete-account">instrucciones de eliminación</a>.</li>
           <li><strong>Cambiar tu nombre visible:</strong> desde <em>Perfil</em> en la app.</li>
           <li><strong>Pedir una copia de tus datos o ejercer cualquier otro derecho:</strong> desde <em>Perfil → Solicitar mis datos (RGPD)</em>, o escribiendo a <a href="mailto:privacy@petamoru.com">privacy@petamoru.com</a> desde el email de tu cuenta. Te informaremos de las medidas adoptadas sin dilación indebida y, como regla general, en el plazo de un mes. Si procede una prórroga conforme al RGPD, te informaremos dentro de ese primer mes.</li>
         </ul>

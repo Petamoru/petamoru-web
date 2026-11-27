@@ -9,13 +9,15 @@
   <link rel="alternate" hreflang="en" href="https://petamoru.com/privacy">
   <link rel="alternate" hreflang="es" href="https://petamoru.com/es/privacy">
   <link rel="alternate" hreflang="x-default" href="https://petamoru.com/privacy">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-layout">
-      <a class="brand" href="/">Petamoru<span>Legal center</span></a>
+      <a class="brand" href="/"><picture><source srcset="/img/logo-dark.png" media="(prefers-color-scheme: dark)"><img src="/img/logo.png" alt="" width="44" height="44"></picture><span class="brand-text"><span class="brand-name">Petamoru</span><span class="brand-sub">Legal center</span></span></a>
       <nav class="site-nav" aria-label="Legal documents">
         <a href="/privacy" aria-current="page">Privacy</a>
         <a href="/terms">Terms</a>
@@ -148,24 +150,24 @@
         </div>
         <p>If you sign in with Google, Google processes your sign-in data as an independent controller under its own <a href="https://policies.google.com/privacy?hl=en">privacy policy</a>.</p>
         <h3>Transfers outside the EEA</h3>
-        <p>Some providers may process data in the United States or other countries outside the European Economic Area. Transfers are subject to Chapter V of the GDPR. The mechanism applicable to each provider is pending verification. You can email us for information about the applicable safeguards.</p>
+        <p>Some providers may process data in the United States or other countries outside the European Economic Area. Google LLC is certified under the EU-U.S. Data Privacy Framework. Other transfers, including any by Supabase, rely on the Standard Contractual Clauses approved by the European Commission. You can email us for a copy of the applicable safeguards.</p>
         <p>We don’t sell your data or share it for advertising. We may disclose data to authorities when required by law.</p>
 
         <h2 id="retention">5. How long we keep your data</h2>
         <ul>
           <li><strong>Account:</strong> account data is kept while you maintain the account. See the <a href="/delete-account">deletion page</a> for what account deletion covers.</li>
           <li><strong>Shared household records:</strong> if you delete your account, your entries in households with other members are retained to preserve the pets’ care history. They appear under “Former member” instead of your name. People who took part in the household may still recognise you from the context or the entries themselves. Households where you were the only member are included in account deletion.</li>
-          <li><strong>Guest mode:</strong> guest data is subject to inactivity cleanup.</li>
-          <li><strong>Notification tokens:</strong> we keep them to send alerts while the token is in use.</li>
-          <li><strong>Invitation codes and failed attempts:</strong> we keep them to manage household access and protect households from misuse. Join requests are subject to expiry.</li>
-          <li><strong>Crash reports:</strong> we keep them to diagnose and fix problems.</li>
+          <li><strong>Guest mode:</strong> a guest that has not used the app for 30 days is deleted automatically, together with its household.</li>
+          <li><strong>Notification tokens:</strong> deleted when they have not been refreshed for 60 days, or as soon as the notification service reports them as invalid.</li>
+          <li><strong>Invitation codes and failed attempts:</strong> codes are deleted 24 hours after they expire or are revoked, and failed attempts 24 hours after they happen. Join requests expire after 7 days.</li>
+          <li><strong>Crash reports:</strong> kept for up to 90 days.</li>
         </ul>
-        <p>Backups may retain data until they are rotated as part of their normal cycle. Exact retention and technical deletion periods are pending verification.</p>
+        <p>Technical backups held by our database provider may contain data until they are overwritten in their regular cycle.</p>
 
         <h2 id="rights">6. Your rights</h2>
         <p>You can exercise your rights to access, rectification, erasure, objection, restriction of processing and data portability:</p>
         <ul>
-          <li><strong>Delete your account and data:</strong> use <em>Profile → Delete my data</em> in the app or write to us. See the <a href="/delete-account">deletion instructions</a>.</li>
+          <li><strong>Delete your account and data:</strong> use <em>Profile → Delete account</em> in the app (<em>Delete my data</em> in guest mode) or write to us. See the <a href="/delete-account">deletion instructions</a>.</li>
           <li><strong>Change your display name:</strong> open <em>Profile</em> in the app.</li>
           <li><strong>Request a copy of your data or exercise another right:</strong> use <em>Profile → Request my data (GDPR)</em> or email <a href="mailto:privacy@petamoru.com">privacy@petamoru.com</a> from your account email address. We will tell you what action we have taken without undue delay and normally within one month. If an extension applies under the GDPR, we will tell you within that first month.</li>
         </ul>
