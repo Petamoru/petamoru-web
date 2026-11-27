@@ -19,7 +19,6 @@ Check the eight paths, reciprocal language links and section links. At narrow wi
 
 ## Validation before publication
 
-- Fill in the legal name, NIF and postal address of the controller in both languages.
 - Confirm that `privacy@petamoru.com` receives mail and how ownership of an account is verified for deletion requests sent by email.
 - Retention periods match the backend's scheduled jobs (`backend/supabase/migrations` in the app repo: guests 30 days, notification tokens 60 days, invitation codes and failed attempts 24 hours, join requests 7 days). Update both languages whenever those jobs change.
 - Check in the Firebase console that Crashlytics keeps reports for 90 days.

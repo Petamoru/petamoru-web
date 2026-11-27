@@ -19,8 +19,6 @@
   --muted: #74594d;
   --primary: #97482f;
   --border: #ccab9c;
-  --pending-bg: #fef3c7;
-  --pending-text: #5c4300;
   color-scheme: light;
 }
 
@@ -32,8 +30,6 @@
     --muted: #d7c2b9;
     --primary: #fd997b;
     --border: #52443d;
-    --pending-bg: #4a3a10;
-    --pending-text: #fef3c7;
     color-scheme: dark;
   }
 }
@@ -291,11 +287,6 @@ th, td {
 
 th, tbody tr:nth-child(even) { background: var(--surface); }
 
-.pending {
-  background: var(--pending-bg);
-  color: var(--pending-text);
-  padding-inline: 0.25em;
-}
 
 .footer-layout {
   display: flex;
