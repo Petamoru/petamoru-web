@@ -1,34 +1,3 @@
-:root {
-  --accent: light-dark(#f47b5a, #fd997b);
-  --accent-soft: light-dark(#ffdbcf, #4d2418);
-  --green: light-dark(#3f6c4d, #a6d4b0);
-  --green-soft: light-dark(#d7ecd9, #1f3a27);
-  --amber: light-dark(#7a5a00, #f3d27a);
-  --amber-soft: light-dark(#fbe7a8, #4a3a10);
-  --shadow-color: light-dark(#5a3424, #000);
-  --card: light-dark(#ffffff, #271e19);
-  --container: light-dark(#ffeae1, #271e19);
-  --container-high: light-dark(#ffe2d6, #322823);
-  --sage: light-dark(#d7e6dd, #3c4b44);
-  --on-sage: light-dark(#47554e, #d7e6dd);
-  --peach: light-dark(#f7e1d3, #54433a);
-  --on-peach: light-dark(#605046, #f7e1d3);
-  --card-shadow: 0 1px 2px color-mix(in srgb, var(--shadow-color) 8%, transparent), 0 1rem 2.5rem -1.25rem color-mix(in srgb, var(--shadow-color) 28%, transparent);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
-}
-
-html { scroll-padding-block-start: 1rem; }
-
-@media (min-width: 48rem) {
-  html { scroll-padding-block-start: 5.5rem; }
-}
-body { overflow-x: clip; }
-
 main.landing { padding-block: 0; }
 
 .landing-page .site-nav {
@@ -41,12 +10,6 @@ main.landing { padding-block: 0; }
 .landing-page .site-nav a { flex: none; }
 
 @media (min-width: 48rem) {
-  .landing-page .site-header {
-    position: sticky;
-    inset-block-start: 0;
-    z-index: 10;
-  }
-
   .landing-page .site-nav { margin-inline: 0; }
 }
 
@@ -61,19 +24,6 @@ main.landing { padding-block: 0; }
   font-size: clamp(2rem, 4.5vw, 3.1rem);
   letter-spacing: -0.03em;
   text-wrap: balance;
-}
-
-.kicker {
-  display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  background: color-mix(in oklab, var(--accent) 22%, transparent);
-  color: var(--primary);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .section-head { max-width: 46rem; margin-inline: auto; text-align: center; }
@@ -1277,32 +1227,3 @@ main.landing { padding-block: 0; }
 .store-pill svg { width: 1.6rem; height: 1.6rem; }
 .store-pill small { display: block; font-size: 0.6875rem; font-weight: 600; opacity: 0.8; }
 
-/* Footer */
-
-.landing-footer { padding-block: 3rem 1.5rem; }
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
-  gap: 2rem;
-}
-
-.footer-grid h2 {
-  margin: 0 0 0.75rem;
-  font-size: 0.8125rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.footer-grid nav, .footer-grid > div { display: grid; align-content: start; gap: 0.35rem; }
-.footer-grid a:not(.brand) { padding-block: 0.3rem; }
-.footer-brand p { margin: 0.75rem 0 0; color: var(--muted); max-width: 26ch; }
-
-.footer-note {
-  margin-block: 2.5rem 0;
-  padding-block-start: 1.25rem;
-  border-block-start: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.875rem;
-}
