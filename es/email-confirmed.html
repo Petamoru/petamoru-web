@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <script>try{document.querySelector('meta[name="color-scheme"]').content=localStorage.getItem("color-scheme")??"light dark"}catch{}</script>
+  <meta name="robots" content="noindex">
+  <title>Email verificado · Petamoru</title>
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/theme.js"></script>
+  <script src="/email-confirmed.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="shell header-layout header-simple">
+      <a class="brand" href="/es/"><img class="only-light" src="/img/logo.png" alt="" width="44" height="44"><img class="only-dark" src="/img/logo-dark.png" alt="" width="44" height="44"><span class="brand-text"><span class="brand-name">Petamoru</span></span></a>
+      <div class="header-tools">
+        <nav class="languages" aria-label="Idioma">
+          <a href="/email-confirmed?lang=en" lang="en" hreflang="en" aria-label="English">EN</a>
+          <a href="/es/email-confirmed" lang="es" hreflang="es" aria-label="Español" aria-current="page">ES</a>
+        </nav>
+        <button type="button" class="theme-toggle"><svg class="only-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg><svg class="only-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="visually-hidden only-light">Cambiar a tema oscuro</span><span class="visually-hidden only-dark">Cambiar a tema claro</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="shell status-page" tabindex="-1">
+    <section id="confirmed" class="status-card">
+      <span class="status-icon" aria-hidden="true">✓</span>
+      <h1>Tu email está verificado</h1>
+      <p>Vuelve a Petamoru y pulsa <strong>«Ya lo he verificado»</strong>, o inicia sesión con tu email y tu clave.</p>
+      <p class="status-note">Ya puedes cerrar esta página.</p>
+    </section>
+    <section id="link-failed" class="status-card" hidden>
+      <span class="status-icon warning" aria-hidden="true">!</span>
+      <h1>Este enlace ya no funciona</h1>
+      <p>Ha caducado o ya se ha usado. Si ya verificaste tu email, inicia sesión en Petamoru.</p>
+      <p>Si no, abre Petamoru y pulsa <strong>«Reenviar email»</strong> para recibir un enlace nuevo. Los enlaces valen durante una hora.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer landing-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/es/"><img class="only-light" src="/img/logo.png" alt="" width="44" height="44"><img class="only-dark" src="/img/logo-dark.png" alt="" width="44" height="44"><span class="brand-text"><span class="brand-name">Petamoru</span></span></a>
+        <p>El cuidado de tus mascotas, compartido con quien las cuida.</p>
+      </div>
+      <nav aria-labelledby="footer-product">
+        <h2 id="footer-product">Producto</h2>
+        <a href="/es/#features">Funciones</a>
+        <a href="/es/#how-it-works">Cómo funciona</a>
+        <a href="/es/#screens">Pantallas</a>
+      </nav>
+      <nav aria-labelledby="footer-legal">
+        <h2 id="footer-legal">Legal</h2>
+        <a href="/es/legal">Centro legal</a>
+        <a href="/es/privacy">Privacidad</a>
+        <a href="/es/terms">Términos</a>
+        <a href="/es/delete-account">Eliminar cuenta</a>
+      </nav>
+      <div>
+        <h2>Contacto</h2>
+        <a href="mailto:privacy@petamoru.com">privacy@petamoru.com</a>
+      </div>
+    </div>
+    <p class="shell footer-note">© 2026 Petamoru</p>
+  </footer>
+</body>
+</html>
