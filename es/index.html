@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Consulta la política de privacidad, los términos de uso de Petamoru y cómo eliminar tu cuenta.">
-  <title>Centro legal · Petamoru</title>
+  <meta name="color-scheme" content="light dark">
+  <script>document.documentElement.classList.add("js");try{document.querySelector('meta[name="color-scheme"]').content=localStorage.getItem("color-scheme")??"light dark"}catch{}</script>
+  <meta name="description" content="Petamoru ayuda a todos los que cuidan de tus mascotas a compartir medicación, comidas, paseos y visitas al veterinario, para que nadie se salte una toma ni la dé dos veces.">
+  <title>Petamoru · El cuidado de tus mascotas, compartido</title>
   <link rel="canonical" href="https://petamoru.com/es/">
   <link rel="alternate" hreflang="en" href="https://petamoru.com/">
   <link rel="alternate" hreflang="es" href="https://petamoru.com/es/">
@@ -12,56 +14,284 @@
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/landing.css">
+  <script type="module" src="/theme.js"></script>
+  <script type="module" src="/landing.js"></script>
 </head>
-<body>
+<body class="landing-page">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="paw" viewBox="0 0 24 24"><circle cx="5" cy="10" r="2.3"/><circle cx="9" cy="5" r="2.3"/><circle cx="15" cy="5" r="2.3"/><circle cx="19" cy="10" r="2.3"/><path d="M12 10.5c-3.2 0-6 4.3-6 7 0 2 1.6 3.2 3.2 3.2 1.1 0 1.7-.6 2.8-.6s1.7.6 2.8.6c1.6 0 3.2-1.2 3.2-3.2 0-2.7-2.8-7-6-7Z"/></symbol>
+    <symbol id="sb-signal" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></symbol>
+    <symbol id="sb-wifi" viewBox="0 0 16 12"><path d="M8 12 5.6 9.2a3.4 3.4 0 0 1 4.8 0Zm-4-4.6a6 6 0 0 1 8 0l1.6-1.8a8.4 8.4 0 0 0-11.2 0Zm-2.8-3a10 10 0 0 1 13.6 0L16.4 2.6a12.4 12.4 0 0 0-16.8 0Z"/></symbol>
+    <symbol id="sb-battery" viewBox="0 0 26 12"><rect x="0.75" y="0.75" width="22" height="10.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><rect x="2.5" y="2.5" width="16" height="7" rx="1.5"/><rect x="24" y="4" width="1.6" height="4" rx="0.8" opacity="0.5"/></symbol>
+    <symbol id="i-meal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10M17 21V3c-2 1.5-3 4-3 7v3h3"/></symbol>
+    <symbol id="i-walk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="13" cy="4" r="2"/><path d="m9 21 3-6 3 3v3M7 12l3-4 4 1 3 4M12 15l-1-6"/></symbol>
+    <symbol id="i-weight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="4"/><path d="M9 9a3 3 0 0 1 6 0M12 9l1.5-1.5"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16Z"/><path d="m13 7 4 4"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 10 12 4l8 6v10h-5v-6H9v6H4Z"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 6"/></symbol>
+  </svg>
+
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <header class="site-header">
     <div class="shell header-layout">
-      <a class="brand" href="/es/" aria-current="page"><picture><source srcset="/img/logo-dark.png" media="(prefers-color-scheme: dark)"><img src="/img/logo.png" alt="" width="44" height="44"></picture><span class="brand-text"><span class="brand-name">Petamoru</span><span class="brand-sub">Centro legal</span></span></a>
-      <nav class="site-nav" aria-label="Documentos legales">
+      <a class="brand" href="/es/" aria-current="page"><img class="only-light" src="/img/logo.png" alt="" width="44" height="44"><img class="only-dark" src="/img/logo-dark.png" alt="" width="44" height="44"><span class="brand-text"><span class="brand-name">Petamoru</span></span></a>
+      <nav class="site-nav" aria-label="Página">
+        <a href="#features">Funciones</a>
+        <a href="#how-it-works">Cómo funciona</a>
+        <a href="#screens">Pantallas</a>
+        <a href="/es/legal">Legal</a>
+      </nav>
+      <div class="header-tools">
+        <nav class="languages" aria-label="Idioma">
+          <a href="/" lang="en" hreflang="en" aria-label="English">EN</a>
+          <a href="/es/" lang="es" hreflang="es" aria-label="Español" aria-current="page">ES</a>
+        </nav>
+        <button type="button" class="theme-toggle"><svg class="only-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg><svg class="only-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="visually-hidden only-light">Cambiar a tema oscuro</span><span class="visually-hidden only-dark">Cambiar a tema claro</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="landing" tabindex="-1">
+    <section class="shell hero">
+      <svg class="paw-trail" viewBox="0 0 520 220" aria-hidden="true">
+        <g fill="currentColor">
+          <use href="#paw" width="34" height="34" x="10" y="150" transform="rotate(60 27 167)" style="--n:0"/>
+          <use href="#paw" width="34" height="34" x="70" y="118" transform="rotate(70 87 135)" style="--n:1"/>
+          <use href="#paw" width="34" height="34" x="135" y="140" transform="rotate(62 152 157)" style="--n:2"/>
+          <use href="#paw" width="34" height="34" x="195" y="100" transform="rotate(72 212 117)" style="--n:3"/>
+          <use href="#paw" width="34" height="34" x="262" y="118" transform="rotate(64 279 135)" style="--n:4"/>
+          <use href="#paw" width="34" height="34" x="322" y="74" transform="rotate(74 339 91)" style="--n:5"/>
+          <use href="#paw" width="34" height="34" x="390" y="88" transform="rotate(66 407 105)" style="--n:6"/>
+          <use href="#paw" width="34" height="34" x="450" y="44" transform="rotate(76 467 61)" style="--n:7"/>
+        </g>
+      </svg>
+
+      <div class="hero-copy">
+        <p class="badge"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#paw"/></svg>Muy pronto en Android</p>
+        <h1>El cuidado de tus mascotas, compartido con <span class="scribble"><em>todos</em><svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14C40 5 90 3 130 8s50 6 67-2" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" pathLength="1"/></svg></span> los que las cuidan.</h1>
+        <p class="lead">Medicación, comidas, paseos y visitas al veterinario en un solo sitio para todo el hogar. Cuando alguien da la pastilla, todos lo saben y nadie la da dos veces.</p>
+        <div class="hero-actions">
+          <a class="button" href="#how-it-works">Mira cómo funciona <span aria-hidden="true">↓</span></a>
+          <a class="button button-soft" href="#screens">Ver las pantallas</a>
+        </div>
+      </div>
+
+      <figure class="demo" aria-label="Animación: Juan registra la toma de Kira en su móvil y aparece en el de Laura con una notificación.">
+        <div class="demo-stage" aria-hidden="true">
+          <div class="device pixel device-juan">
+            <span class="person"><b>J</b> Móvil de Juan</span>
+            <div class="screen">
+              <div class="statusbar"><span>8:05</span><span><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div>
+              <div class="app">
+                <p class="app-title">Inicio</p>
+                <p class="app-greet">Martes, 6 de octubre <b>Buenos días, Juan</b></p>
+                <p class="app-section">Tomas de hoy</p>
+                <div class="dose">
+                  <span class="ring" data-loop></span>
+                  <div class="dose-top">
+                    <span class="chip chip-time">08:00</span>
+                    <span class="swap"><span class="chip chip-pending dose-pending" data-loop>Pendiente</span><span class="chip chip-done dose-done" data-loop>✓ Administrada</span></span>
+                  </div>
+                  <div class="dose-main"><span class="avatar">K</span><span><b>Amoxicilina</b><small>Kira · 1,5 ml</small></span></div>
+                  <div class="swap"><span class="dose-button" data-loop>Registrar</span><span class="dose-by" data-loop>Administrada por Juan a las 08:05</span></div>
+                  <span class="tap" data-loop></span>
+                </div>
+                <div class="dose">
+                  <div class="dose-top"><span class="chip chip-time">20:00</span><span class="chip chip-pending">Pendiente</span></div>
+                  <div class="dose-main"><span class="avatar avatar-toby">T</span><span><b>Prednisona</b><small>Toby · 1 comprimido</small></span></div>
+                </div>
+                <p class="app-section">Accesos rápidos</p>
+                <div class="quick"><span><svg><use href="#i-meal"/></svg>Comida</span><span><svg><use href="#i-walk"/></svg>Paseo</span><span><svg><use href="#i-weight"/></svg>Peso</span><span><svg><use href="#i-note"/></svg>Nota</span></div>
+              </div>
+              <span class="fab">+ Registrar</span>
+              <nav class="app-nav"><span class="on"><svg><use href="#i-home"/></svg>Inicio</span><span><svg><use href="#i-list"/></svg>Historial</span><span><svg><use href="#i-heart"/></svg>Salud</span><span><svg><use href="#i-people"/></svg>Hogares</span></nav>
+            </div>
+          </div>
+
+          <span class="sync" data-loop><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M21 12a9 9 0 0 1-15.5 6.2M3 12A9 9 0 0 1 18.5 5.8"/><path d="M18.5 2v4h-4M5.5 22v-4h4"/></svg>Sincronizando</span>
+
+          <div class="device iphone device-laura">
+            <span class="person"><b>L</b> Móvil de Laura</span>
+            <div class="screen">
+              <div class="statusbar"><span>8:05</span><span><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div>
+              <div class="notification" data-loop><img src="/img/logo.png" alt="" width="44" height="44"><span><b>Petamoru</b><span>Juan dio a Kira su amoxicilina</span></span></div>
+              <div class="app">
+                <p class="app-title">Inicio</p>
+                <p class="app-greet">Martes, 6 de octubre <b>Buenos días, Laura</b></p>
+                <p class="app-section">Tomas de hoy</p>
+                <div class="dose">
+                  <span class="ring" data-loop></span>
+                  <div class="dose-top">
+                    <span class="chip chip-time">08:00</span>
+                    <span class="swap"><span class="chip chip-pending dose-pending" data-loop>Pendiente</span><span class="chip chip-done dose-done" data-loop>✓ Administrada</span></span>
+                  </div>
+                  <div class="dose-main"><span class="avatar">K</span><span><b>Amoxicilina</b><small>Kira · 1,5 ml</small></span></div>
+                  <div class="swap"><span class="dose-button" data-loop>Registrar</span><span class="dose-by" data-loop>Administrada por Juan a las 08:05</span></div>
+                </div>
+                <div class="dose">
+                  <div class="dose-top"><span class="chip chip-time">20:00</span><span class="chip chip-pending">Pendiente</span></div>
+                  <div class="dose-main"><span class="avatar avatar-toby">T</span><span><b>Prednisona</b><small>Toby · 1 comprimido</small></span></div>
+                </div>
+                <p class="app-section">Accesos rápidos</p>
+                <div class="quick"><span><svg><use href="#i-meal"/></svg>Comida</span><span><svg><use href="#i-walk"/></svg>Paseo</span><span><svg><use href="#i-weight"/></svg>Peso</span><span><svg><use href="#i-note"/></svg>Nota</span></div>
+              </div>
+              <span class="fab">+ Registrar</span>
+              <nav class="app-nav"><span class="on"><svg><use href="#i-home"/></svg>Inicio</span><span><svg><use href="#i-list"/></svg>Historial</span><span><svg><use href="#i-heart"/></svg>Salud</span><span><svg><use href="#i-people"/></svg>Hogares</span></nav>
+            </div>
+          </div>
+        </div>
+        <div class="pet-card" aria-hidden="true">
+          <img src="/img/pets-sofa.webp" alt="" width="1080" height="672">
+          <span><b>Casa de Juan</b><small>3 mascotas · 2 cuidadores</small></span>
+          <span class="chip chip-done">✓ Sincronizado</span>
+        </div>
+        <button type="button" class="demo-toggle" data-pause="Pausar animación" data-play="Reanudar animación">Pausar animación</button>
+      </figure>
+    </section>
+
+    <section id="features" class="pillars" aria-labelledby="pillars-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="kicker">Tranquilidad</p>
+          <h2 id="pillars-title">Menos «¿le ha dado alguien la pastilla?» y más tiempo con ellos</h2>
+          <p class="section-intro">Tres cosas de las que Petamoru se encarga por ti, para todo el hogar a la vez.</p>
+        </div>
+        <ul class="pillar-grid">
+          <li class="pillar reveal" style="--d:0">
+            <span class="pillar-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5 3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7Z"/><path d="m8.5 8.5 7 7"/></svg></span>
+            <h3>Tomas sin dudas</h3>
+            <p>Pautas con recordatorios en todos los móviles. Cuando alguien registra una toma, el resto la ve al momento, y si se registra dos veces, Petamoru te avisa.</p>
+            <div class="mini" aria-hidden="true">
+              <div class="mini-row"><span class="mini-icon sage">✓</span><span><b>Apoquel 16 mg</b><small>La dio Laura</small></span><span class="mini-time">08:15</span></div>
+              <div class="mini-row warn"><span class="mini-icon amber">!</span><span><b>Posible dosis doble</b><small>Ana 08:02 · Beto 08:07</small></span></div>
+            </div>
+          </li>
+          <li class="pillar reveal" style="--d:1">
+            <span class="pillar-icon sage" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-people"/></svg></span>
+            <h3>Varios hogares, una sola vista</h3>
+            <p>Tu casa, la de tus padres, la de tu pareja. Invita con un código, aprueba cada solicitud y ve todas las mascotas juntas.</p>
+            <div class="mini" aria-hidden="true">
+              <div class="mini-row"><span class="avatars"><i>J</i><i>A</i></span><span><b>Casa de Juan</b><small>Kira · Bruno</small></span><span class="chip chip-time">Administrador</span></div>
+              <div class="mini-row"><span class="avatars"><i>L</i><i>M</i><i>P</i></span><span><b>Casa de la abuela</b><small>Toby</small></span><span class="chip chip-pending">Cuidador</span></div>
+            </div>
+          </li>
+          <li class="pillar reveal" style="--d:2">
+            <span class="pillar-icon peach" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-heart"/></svg></span>
+            <h3>La salud, en datos</h3>
+            <p>Peso, vacunas y visitas al veterinario con recordatorios. Datos y fechas, sin diagnósticos.</p>
+            <div class="mini" aria-hidden="true">
+              <div class="mini-chart"><span><small>Peso · 6 meses</small><b>24,5 kg <em>+0,3 kg</em></b></span>
+                <svg class="sparkline" viewBox="0 0 300 70"><path class="area" d="M2 58 C40 54 60 40 100 44 S160 56 200 40 S260 20 290 14 V70 H2 Z"/><path class="line" d="M2 58 C40 54 60 40 100 44 S160 56 200 40 S260 20 290 14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" pathLength="1"/><circle cx="290" cy="14" r="6"/></svg>
+              </div>
+              <div class="mini-row"><span class="mini-icon peach">💉</span><span><b>Rabia</b><small>Próxima dosis: 14 oct</small></span><span class="chip chip-done">Al día</span></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="shell story" aria-labelledby="story-title">
+      <p class="kicker">Cómo funciona</p>
+      <h2 id="story-title">De la primera invitación a la última toma</h2>
+      <div class="story-grid">
+        <div class="story-step" data-step="1">
+          <span class="step-index">01</span>
+          <h3>Reúne a tu hogar</h3>
+          <p>Añade a tus mascotas e invita con un código a quien las cuida. Tú apruebas cada solicitud y decides quién puede administrar el hogar.</p>
+        </div>
+        <figure class="device pixel story-shot" data-step="1"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/household-light.webp" alt="Pantalla del hogar con dos mascotas, Kira y Bruno, y dos cuidadores: Juan, administrador y titular, y Ana, cuidadora." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/household-dark.webp" alt="Pantalla del hogar con dos mascotas, Kira y Bruno, y dos cuidadores: Juan, administrador y titular, y Ana, cuidadora." width="360" height="808" loading="lazy"></div></figure>
+
+        <div class="story-step" data-step="2">
+          <span class="step-index">02</span>
+          <h3>Regístralo en dos toques</h3>
+          <p>Marca la toma como administrada u omitida al darla. Comidas, paseos, peso y notas son igual de rápidos, también sin cobertura.</p>
+        </div>
+        <figure class="device pixel story-shot" data-step="2"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/log-dose-light.webp" alt="Pantalla para registrar la toma de amoxicilina de Luna, marcada como administrada hoy a las 08:05." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/log-dose-dark.webp" alt="Pantalla para registrar la toma de amoxicilina de Luna, marcada como administrada hoy a las 08:05." width="360" height="808" loading="lazy"></div></figure>
+
+        <div class="story-step" data-step="3">
+          <span class="step-index">03</span>
+          <h3>Las dosis dobles no se escapan</h3>
+          <p>Si dos personas dan la misma toma, Petamoru marca una posible dosis doble en los dos móviles para que lo resolváis juntos.</p>
+        </div>
+        <figure class="device pixel story-shot" data-step="3"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/double-dose-light.webp" alt="Pantalla de posible doble dosis: la misma toma la registraron Ana a las 08:02 y Beto a las 08:07, con opciones para borrar una o confirmar las dos." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/double-dose-dark.webp" alt="Pantalla de posible doble dosis: la misma toma la registraron Ana a las 08:02 y Beto a las 08:07, con opciones para borrar una o confirmar las dos." width="360" height="808" loading="lazy"></div></figure>
+
+        <div class="story-step" data-step="4">
+          <span class="step-index">04</span>
+          <h3>Todo queda en el historial</h3>
+          <p>Tomas, comidas, paseos y visitas al veterinario, con quién registró cada cosa. Filtra por mascota, tipo o persona.</p>
+        </div>
+        <figure class="device pixel story-shot" data-step="4"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/timeline-light.webp" alt="Historial con comidas y tomas agrupadas por día y filtros por tipo." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/timeline-dark.webp" alt="Historial con comidas y tomas agrupadas por día y filtros por tipo." width="360" height="808" loading="lazy"></div></figure>
+
+        <div class="story-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      </div>
+    </section>
+
+    <section class="shell species" aria-labelledby="species-title">
+      <div class="species-photo reveal">
+        <img src="/img/pets-sofa.webp" alt="Un perro, un gato y un conejo descansando juntos en un sofá." width="1080" height="672" loading="lazy">
+        <ul class="species-chips" aria-label="Algunas de las mascotas que puedes añadir">
+          <li style="--d:0"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#paw"/></svg>Perros</li><li style="--d:1"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#paw"/></svg>Gatos</li><li style="--d:2"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#paw"/></svg>Conejos</li><li style="--d:3"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#paw"/></svg>Aves</li><li style="--d:4"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#paw"/></svg>Reptiles</li><li style="--d:5"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#paw"/></svg>Y más</li>
+        </ul>
+      </div>
+      <div class="species-copy reveal" style="--d:1">
+        <p class="kicker">Para toda la familia</p>
+        <h2 id="species-title">Sea de la especie que sea</h2>
+        <p class="section-intro">De un cachorro a una tortuga: añade todas las mascotas de casa y registra lo que necesita cada una. Petamoru no decide por ti; lleva la cuenta para que nadie se olvide.</p>
+      </div>
+    </section>
+
+    <section id="screens" class="fan" aria-labelledby="fan-title">
+      <div class="shell">
+        <p class="kicker">Por dentro</p>
+        <h2 id="fan-title">Hecha para el día a día</h2>
+        <p class="section-intro">Pantallas reales de la app.</p>
+      </div>
+      <ul class="fan-row" tabindex="0" aria-label="Pantallas de la app">
+        <li style="--offset:-2;--depth:2"><figure><div class="device iphone"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/activity-light.webp" alt="Inicio con accesos rápidos y actividad reciente." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/activity-dark.webp" alt="Inicio con accesos rápidos y actividad reciente." width="360" height="808" loading="lazy"></div></div><figcaption>Actividad reciente</figcaption></figure></li>
+        <li style="--offset:-1;--depth:1"><figure><div class="device pixel"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/schedule-light.webp" alt="Pauta de amoxicilina dos veces al día durante 15 días." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/schedule-dark.webp" alt="Pauta de amoxicilina dos veces al día durante 15 días." width="360" height="808" loading="lazy"></div></div><figcaption>Pautas de medicación</figcaption></figure></li>
+        <li style="--offset:0;--depth:0"><figure><div class="device iphone"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/home-light.webp" alt="Tomas de hoy: una atrasada, una pendiente y una administrada." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/home-dark.webp" alt="Tomas de hoy: una atrasada, una pendiente y una administrada." width="360" height="808" loading="lazy"></div></div><figcaption>Tomas de hoy</figcaption></figure></li>
+        <li style="--offset:1;--depth:1"><figure><div class="device pixel"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/vaccinations-light.webp" alt="Vacunas con la de la rabia vencida y las próximas dosis." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/vaccinations-dark.webp" alt="Vacunas con la de la rabia vencida y las próximas dosis." width="360" height="808" loading="lazy"></div></div><figcaption>Vacunas</figcaption></figure></li>
+        <li style="--offset:2;--depth:2"><figure><div class="device iphone"><div class="screen"><div class="statusbar"><span>9:41</span><span><svg viewBox="0 0 18 12"><use href="#sb-signal"/></svg><svg viewBox="0 0 16 12"><use href="#sb-wifi"/></svg><svg viewBox="0 0 26 12"><use href="#sb-battery"/></svg></span></div><img class="only-light" src="/img/screens/weight-light.webp" alt="Gráfica del peso de cada mascota." width="360" height="808" loading="lazy"><img class="only-dark" src="/img/screens/weight-dark.webp" alt="Gráfica del peso de cada mascota." width="360" height="808" loading="lazy"></div></div><figcaption>Peso</figcaption></figure></li>
+      </ul>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="shell cta reveal">
+        <span class="cta-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#paw"/></svg></span>
+        <h2 id="cta-title">Cuida de tu mascota con la calma que se merece</h2>
+        <p>Empieza como invitado con tu mascota y crea una cuenta cuando quieras compartir su cuidado. Tus datos se guardan en la UE.</p>
+        <p class="store-pill"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3.5v17l9.5-8.5Zm11 7.2 2.6-2.3L6.4 2.2Zm0 2.6-8.6 8.5 11.2-6.2Zm4.1-4 -2.4 2.4 2.4 2.3 2.2-1.2c.6-.4.6-1.3 0-1.7Z"/></svg><span><small>Muy pronto en</small>Google Play</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer landing-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/es/"><img class="only-light" src="/img/logo.png" alt="" width="44" height="44"><img class="only-dark" src="/img/logo-dark.png" alt="" width="44" height="44"><span class="brand-text"><span class="brand-name">Petamoru</span></span></a>
+        <p>El cuidado de tus mascotas, compartido con quien las cuida.</p>
+      </div>
+      <nav aria-labelledby="footer-product">
+        <h2 id="footer-product">Producto</h2>
+        <a href="#features">Funciones</a>
+        <a href="#how-it-works">Cómo funciona</a>
+        <a href="#screens">Pantallas</a>
+      </nav>
+      <nav aria-labelledby="footer-legal">
+        <h2 id="footer-legal">Legal</h2>
         <a href="/es/privacy">Privacidad</a>
         <a href="/es/terms">Términos</a>
         <a href="/es/delete-account">Eliminar cuenta</a>
       </nav>
-      <nav class="languages" aria-label="Idioma">
-        <a href="/" lang="en" hreflang="en" aria-label="English">EN</a>
-        <a href="/es/" lang="es" hreflang="es" aria-label="Español" aria-current="page">ES</a>
-      </nav>
+      <div>
+        <h2>Contacto</h2>
+        <a href="mailto:privacy@petamoru.com">privacy@petamoru.com</a>
+      </div>
     </div>
-  </header>
-
-  <main id="main" class="shell" tabindex="-1">
-    <div class="page-heading">
-      <h1>Centro legal</h1>
-      <p>Consulta la política de privacidad, los términos de uso de Petamoru y cómo eliminar tu cuenta.</p>
-    </div>
-    <ul class="document-cards">
-      <li>
-        <a class="document-card" href="/es/privacy">
-          <h2>Política de privacidad <span aria-hidden="true">→</span></h2>
-          <p>Cómo usa Petamoru tus datos, quién puede verlos y cómo ejercer tus derechos.</p>
-        </a>
-      </li>
-      <li>
-        <a class="document-card" href="/es/terms">
-          <h2>Términos del servicio <span aria-hidden="true">→</span></h2>
-          <p>Las condiciones que se aplican cuando usas la app Petamoru.</p>
-        </a>
-      </li>
-      <li>
-        <a class="document-card" href="/es/delete-account">
-          <h2>Eliminar tu cuenta <span aria-hidden="true">→</span></h2>
-          <p>Cómo solicitar la eliminación de tu cuenta de Petamoru desde la app o por correo y qué ocurre con tus datos.</p>
-        </a>
-      </li>
-    </ul>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-layout">
-      <a href="/es/">Centro legal</a>
-      <a href="mailto:privacy@petamoru.com">privacy@petamoru.com</a>
-    </div>
+    <p class="shell footer-note">© 2026 Petamoru</p>
   </footer>
 </body>
 </html>
